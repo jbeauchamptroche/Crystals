@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 
@@ -7,16 +8,16 @@
 
 <title>CRYSTAL COLLECTOR</title>
 
-<link rel="stylesheet" type="text/css" href="css/reset.css"
-<link rel="stylesheet" type="text/css" href="css/style.css"
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
 </head>
 
-<body>
+<body background="assets/images/crystalbackground.jpg">
 
 </div>
     <h1>CRYSTALS COLLECTOR!</h1>
@@ -31,18 +32,20 @@
     <h3>Generate Number:<p id="generated"></p>
 
     <br>
-
+                        
         <div id="win-lose"></div>
         <div id="win-lose-tracker"></div>
 
     <div><h3>Wins:</h3><p id="wins"></p></div>
     <div><h3>Losses:</h3><p id="losses"></p></div>
 
+
+
 <img id="crystals" 
-    <img src="" alt="crystalOneBlue" style="width:90px;height:75px;">
-    <img src="" id="crystalTwoYellow" style="width:90px;height:75px;">
-    <img src="" id="crystalThreeRed" style="width:90px;height:75px;">
-    <img src="" id="crystalFourGreen" style="width:90px;height:75px;">
+    <img id="assets/images/BlueCrystal.jpg" id="crystalOne" alt="crystalOne" style="width:90px;height:75px;">
+    <img src="assets/images/yellowcrystal.jpg" id="crystalTwo" style="width:90px;height:75px;">
+    <img src="assets/images/redcrystal.jpg" id="crystalThree" style="width:90px;height:75px;">
+    <img src="assets/images/greencrystal.jpg" id="crystalFour" style="width:90px;height:75px;">
 
     <input type="button" value="reset" id="reset-button"/>
     
@@ -55,9 +58,11 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 
-<script type="text/javascript">
+<script type="text/javascript" 
 
-$( document ).ready(function(){
+/*function expression*/
+
+    $(document).ready(function(){
     var yourNumber = 0;
     var wins = 0;
     var losses = 0;
@@ -79,12 +84,16 @@ $( document ).ready(function(){
         $('#generated').html(randomNumber);
     }
 
-    //grab the reset button with jQuery and then run the function restart on click.
+/* grab the reset button with jQuery and then run the function restart on click*/
+/* function for crystalone is not working*/
+
     $('#reset-button').on('click', restart);
 
      var newYourNumber =  function yourNumber(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
      };
+
+/*if statements - evaluate and check a condition*/
 
     $("#crystalOne").on("click", function(){
         var randomOnClick = newYourNumber(1 , 12);
